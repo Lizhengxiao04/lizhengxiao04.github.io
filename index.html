@@ -78,6 +78,18 @@
         .copy-btn {
             transition: background-color 0.3s, transform 0.1s, color 0.3s;
         }
+        
+        /* Fix for filter button disappearing on click */
+        .filter-btn.active {
+            background-color: #4F46E5 !important;
+            color: white !important;
+            border: none !important;
+        }
+        
+        /* Override default button active state */
+        .filter-btn:active {
+            transform: none !important;
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -260,7 +272,9 @@
                     <!-- 2. Flat & 3D Design (Blue) -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
                         <div class="flex items-center space-x-3 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 100 4h2a2 2 0 100-4h-2zm-3 8a2 2 0 100 4h2a2 2 0 100-4H8zm-3 8a2 2 0 100 4h2a2 2 0 100-4H5zm12-4a2 2 0 100 4h2a2 2 0 100-4h-2zm-3-8a2 2 0 100 4h2a2 2 0 100-4h-2z"/></svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600">
+                                <path d="M17.3186 11.2221C17.5033 10.7016 17.231 10.1299 16.7105 9.94526C16.1901 9.76057 15.6184 10.0328 15.4337 10.5533L16.3761 10.8877L17.3186 11.2221ZM14.3427 16.6183L15.2851 16.9527L15.2851 16.9527L14.3427 16.6183ZM12.9712 17.8057L13.1674 18.7863L13.1674 18.7863L12.9712 17.8057ZM1 20.2L0.015873 20.0225C-0.0428667 20.3483 0.0633794 20.682 0.299637 20.9138C0.535895 21.1456 0.871552 21.2455 1.19612 21.1806L1 20.2ZM3.18462 8.08526L4.16875 8.26273L4.16875 8.26273L3.18462 8.08526ZM4.44496 6.65741L4.74323 7.61189L4.74323 7.61189L4.44496 6.65741ZM10.6106 5.77834C11.1377 5.61361 11.4315 5.05273 11.2668 4.52559C11.1021 3.99844 10.5412 3.70465 10.014 3.86938L10.3123 4.82386L10.6106 5.77834ZM0.509458 19.2763C0.118934 19.6668 0.118934 20.3 0.509458 20.6905C0.899983 21.0811 1.53315 21.0811 1.92367 20.6905L1.21656 19.9834L0.509458 19.2763ZM7.12124 15.493C7.51176 15.1024 7.51176 14.4693 7.12124 14.0788C6.73071 13.6882 6.09755 13.6882 5.70703 14.0788L6.41413 14.7859L7.12124 15.493ZM19.8412 6.55638L20.5483 5.84928L20.5483 5.84928L19.8412 6.55638ZM19.8412 8.2889L19.1341 7.5818L19.1341 7.5818L19.8412 8.2889ZM12.9111 1.35882L12.204 0.65171L12.204 0.651711L12.9111 1.35882ZM14.6436 1.35882L13.9365 2.06592L13.9365 2.06592L14.6436 1.35882ZM10.7454 5.25699L11.4525 4.54989L11.4525 4.54988L10.7454 5.25699ZM10.7454 3.52447L11.4525 4.23158L11.4525 4.23158L10.7454 3.52447ZM15.943 10.4546L15.2359 11.1617L15.2359 11.1617L15.943 10.4546ZM17.6755 10.4546L18.3826 11.1617L18.3826 11.1617L17.6755 10.4546ZM16.3761 10.8877L15.4337 10.5533L13.4003 16.2839L14.3427 16.6183L15.2851 16.9527L17.3186 11.2221L16.3761 10.8877ZM12.9712 17.8057L12.7751 16.8252L0.803884 19.2194L1 20.2L1.19612 21.1806L13.1674 18.7863L12.9712 17.8057ZM1 20.2L1.98413 20.3775L4.16875 8.26273L3.18462 8.08526L2.2005 7.9078L0.015873 20.0225L1 20.2ZM4.44496 6.65741L4.74323 7.61189L10.6106 5.77834L10.3123 4.82386L10.014 3.86938L4.14668 5.70293L4.44496 6.65741ZM3.18462 8.08526L4.16875 8.26273C4.22411 7.95573 4.44548 7.70493 4.74323 7.61189L4.44496 6.65741L4.14668 5.70293C3.13799 6.01814 2.38804 6.86778 2.2005 7.9078L3.18462 8.08526ZM14.3427 16.6183L13.4003 16.2839C13.3017 16.5618 13.0642 16.7673 12.7751 16.8252L12.9712 17.8057L13.1674 18.7863C14.1468 18.5904 14.9511 17.8941 15.2851 16.9527L14.3427 16.6183ZM1.21656 19.9834L1.92367 20.6905L7.12124 15.493L6.41413 14.7859L5.70703 14.0788L0.509458 19.2763L1.21656 19.9834ZM15.943 10.4546L16.6501 9.74745L11.4525 4.54989L10.7454 5.25699L10.0383 5.9641L15.2359 11.1617L15.943 10.4546ZM10.7454 3.52447L11.4525 4.23158L13.6182 2.06592L12.9111 1.35882L12.204 0.651711L10.0383 2.81736L10.7454 3.52447ZM14.6436 1.35882L13.9365 2.06592L19.1341 7.26349L19.8412 6.55638L20.5483 5.84928L15.3507 0.65171L14.6436 1.35882ZM19.8412 8.2889L19.1341 7.5818L16.9684 9.74745L17.6755 10.4546L18.3826 11.1617L20.5483 8.99601L19.8412 8.2889ZM19.8412 6.55638L19.1341 7.26349C19.222 7.35139 19.222 7.4939 19.1341 7.5818L19.8412 8.2889L20.5483 8.99601C21.4172 8.12706 21.4172 6.71822 20.5483 5.84928L19.8412 6.55638ZM12.9111 1.35882L13.6182 2.06592C13.7061 1.97803 13.8486 1.97803 13.9365 2.06592L14.6436 1.35882L15.3507 0.65171C14.4818 -0.217237 13.0729 -0.217236 12.204 0.65171L12.9111 1.35882ZM10.7454 5.25699L11.4525 4.54988C11.3646 4.46199 11.3646 4.31948 11.4525 4.23158L10.7454 3.52447L10.0383 2.81736C9.16938 3.68631 9.16938 5.09515 10.0383 5.9641L10.7454 5.25699ZM15.943 10.4546L15.2359 11.1617C16.1048 12.0306 17.5137 12.0306 18.3826 11.1617L17.6755 10.4546L16.9684 9.74745C16.8805 9.83535 16.738 9.83535 16.6501 9.74745L15.943 10.4546ZM6.84726 10.8877L7.55437 11.5948C8.12069 11.0285 9.03888 11.0285 9.6052 11.5948L10.3123 10.8877L11.0194 10.1806C9.67204 8.83321 7.48752 8.83321 6.14015 10.1806L6.84726 10.8877ZM10.3123 10.8877L9.6052 11.5948C10.1715 12.1611 10.1715 13.0793 9.6052 13.6456L10.3123 14.3527L11.0194 15.0598C12.3668 13.7125 12.3668 11.528 11.0194 10.1806L10.3123 10.8877ZM10.3123 14.3527L9.6052 13.6456C9.03888 14.2119 8.12069 14.2119 7.55437 13.6456L6.84726 14.3527L6.14016 15.0598C7.48753 16.4072 9.67204 16.4072 11.0194 15.0598L10.3123 14.3527ZM6.84726 14.3527L7.55437 13.6456C6.98805 13.0793 6.98805 12.1611 7.55437 11.5948L6.84726 10.8877L6.14015 10.1806C4.79278 11.528 4.79279 13.7125 6.14016 15.0598L6.84726 14.3527Z" fill="currentColor"/>
+                            </svg>
                             <h4 class="text-xl font-bold text-gray-900">平面与三维设计</h4>
                         </div>
                         <ul class="space-y-4">
@@ -288,7 +302,9 @@
                     <!-- 4. Language & Office (Green) -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
                         <div class="flex items-center space-x-3 mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 018 10.58C8 10 7.42 9 6.5 9S5 10 5 10.58c0 1.49-.96 2.45-2.548 2.92M20 7.5A.5.5 0 0119.5 7h-11a.5.5 0 010-1h11a.5.5 0 01.5.5zm-5 4A.5.5 0 0114.5 11h-11a.5.5 0 010-1h11a.5.5 0 01.5.5zm-5 4A.5.5 0 019.5 15h-11a.5.5 0 010-1h11a.5.5 0 01.5.5z"/></svg>
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" style="flex: none; order: 0; flex-grow: 0;">
+                                <path d="M5.8 8.29023V8.2M10.6 8.29023V8.2M15.4 8.29023V8.2M10.287 15.1913L5.27826 20.2V15.1913H3.4C2.07452 15.1913 1 14.1168 1 12.7913V3.4C1 2.07452 2.07452 1 3.4 1H17.8C19.1255 1 20.2 2.07452 20.2 3.4V12.7913C20.2 14.1168 19.1255 15.1913 17.8 15.1913H10.287Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                             <h4 class="text-xl font-bold text-gray-900">语言与办公</h4>
                         </div>
                         <ul class="space-y-4">
@@ -389,14 +405,15 @@
                 <h3 class="text-4xl font-extrabold text-center text-gray-900 mb-6">精选作品展示</h3>
                 <div class="flex justify-center space-x-4 mb-10">
                     <button class="filter-btn active px-5 py-2 text-white bg-main-blue font-semibold rounded-full shadow-md transition duration-300" data-filter="all">全部</button>
-                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300" data-filter="video">视频制作</button>
-                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300" data-filter="organization">组织策划</button>
+                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm" data-filter="video">视频制作</button>
+                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm" data-filter="organization">组织策划</button>
+                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm" data-filter="photography">摄影摄像</button>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6" id="portfolio-grid">
                     <!-- Project 1: 徐州工程学院宣传片 -->
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
-                    <div class="card-container-project project-card video-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(0)">
+                    <div class="card-container-project project-card video-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(0)">
                         <!-- NEW Arrow Guide Icon -->
                         <div class="arrow-guide absolute top-4 right-4 p-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -420,7 +437,7 @@
 
                     <!-- Project 2: 星迷宇宙游戏宣传片 -->
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
-                    <div class="card-container-project project-card video-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(1)">
+                    <div class="card-container-project project-card video-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(1)">
                         <!-- NEW Arrow Guide Icon -->
                         <div class="arrow-guide absolute top-4 right-4 p-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -444,7 +461,7 @@
 
                     <!-- Project 3: 新媒体视觉传达中心 -->
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
-                    <div class="card-container-project project-card organization-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(2)">
+                    <div class="card-container-project project-card organization-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(2)">
                          <!-- NEW Arrow Guide Icon -->
                         <div class="arrow-guide absolute top-4 right-4 p-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -468,7 +485,7 @@
 
                     <!-- Project 4: 党支部活动及会议记录 -->
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
-                    <div class="card-container-project project-card organization-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(3)">
+                    <div class="card-container-project project-card photography-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(3)">
                          <!-- NEW Arrow Guide Icon -->
                         <div class="arrow-guide absolute top-4 right-4 p-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -901,32 +918,63 @@
                 const cards = document.querySelectorAll('.project-card');
                 const buttons = document.querySelectorAll('.filter-btn');
                 
-                // 更新按钮样式
+                // 重置所有按钮样式
                 buttons.forEach(btn => {
                     btn.classList.remove('bg-main-blue', 'text-white', 'active');
                     btn.classList.add('bg-white', 'border', 'border-gray-300', 'text-gray-600');
                 });
-                document.querySelector(`[data-filter="${filter}"]`).classList.remove('bg-white', 'border', 'border-gray-300', 'text-gray-600');
-                document.querySelector(`[data-filter="${filter}"]`).classList.add('bg-main-blue', 'text-white', 'active');
                 
-                // 筛选卡片
+                // 设置当前激活按钮样式
+                const activeBtn = document.querySelector(`[data-filter="${filter}"]`);
+                if (activeBtn) {
+                    activeBtn.classList.remove('bg-white', 'border', 'border-gray-300', 'text-gray-600');
+                    activeBtn.classList.add('bg-main-blue', 'text-white', 'active');
+                }
+                
+                // 第一步：所有卡片先统一淡出
                 cards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                    } else if (filter === 'video') {
-                        if (card.classList.contains('video-project')) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    } else if (filter === 'organization') {
-                        if (card.classList.contains('organization-project')) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
                 });
+                
+                // 第二步：在淡出完成后，显示符合条件的卡片
+                setTimeout(() => {
+                    cards.forEach((card) => {
+                        const isVideo = card.classList.contains('video-project');
+                        const isOrganization = card.classList.contains('organization-project');
+                        
+                        let shouldShow = false;
+                        
+                        // 检查卡片类型
+                        const isPhotography = card.classList.contains('photography-project');
+                        
+                        if (filter === 'all') {
+                            shouldShow = true;
+                        } else if (filter === 'video') {
+                            shouldShow = isVideo;
+                        } else if (filter === 'organization') {
+                            shouldShow = isOrganization;
+                        } else if (filter === 'photography') {
+                            shouldShow = isPhotography;
+                        }
+                        
+                        if (shouldShow) {
+                            // 先设置为显示状态，然后触发淡入动画
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.95)';
+                            
+                            // 确保动画流畅
+                            requestAnimationFrame(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            });
+                        } else {
+                            // 不符合条件的卡片保持隐藏
+                            card.style.display = 'none';
+                        }
+                    });
+                }, 150); // 与淡出动画时长一致
             }
             
             // 筛选按钮事件监听
