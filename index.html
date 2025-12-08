@@ -93,17 +93,17 @@
                 <span>Li Zhengxiao</span>
             </a>
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
                 <!-- Links updated with data-target for smooth scroll -->
-                <a href="#" data-target="about" class="text-gray-600 hover:text-main-blue transition duration-150">关于我</a>
-                <a href="#" data-target="skills" class="text-gray-600 hover:text-main-blue transition duration-150">技能栈</a>
-                <a href="#" data-target="experience" class="text-gray-600 hover:text-main-blue transition duration-150">经历</a>
-                <a href="#" data-target="portfolio" class="text-gray-600 hover:text-main-blue transition duration-150">作品集</a>
-                <a href="#" data-target="honors" class="text-gray-600 hover:text-main-blue transition duration-150">荣誉</a>
-                <a href="#" data-target="contact" class="px-4 py-2 rounded-full bg-main-blue text-white hover:bg-main-blue-dark transition duration-150">联系我</a>
+                <a href="#" data-target="about" class="flex items-center h-16 text-gray-600 hover:text-main-blue transition duration-150">关于我</a>
+                <a href="#" data-target="skills" class="flex items-center h-16 text-gray-600 hover:text-main-blue transition duration-150">技能栈</a>
+                <a href="#" data-target="experience" class="flex items-center h-16 text-gray-600 hover:text-main-blue transition duration-150">经历</a>
+                <a href="#" data-target="portfolio" class="flex items-center h-16 text-gray-600 hover:text-main-blue transition duration-150">作品集</a>
+                <a href="#" data-target="honors" class="flex items-center h-16 text-gray-600 hover:text-main-blue transition duration-150">荣誉</a>
+                <a href="#" data-target="contact" class="flex items-center px-4 py-2 rounded-full bg-main-blue text-white hover:bg-main-blue-dark transition duration-150">联系我</a>
             </nav>
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-100 text-gray-700 focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md hover:bg-gray-100 text-gray-700 focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
@@ -112,12 +112,12 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 space-y-2">
-                <a href="#" data-target="about" class="block py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">关于我</a>
-                <a href="#" data-target="skills" class="block py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">技能栈</a>
-                <a href="#" data-target="experience" class="block py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">经历</a>
-                <a href="#" data-target="portfolio" class="block py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">作品集</a>
-                <a href="#" data-target="honors" class="block py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">荣誉</a>
-                <a href="#" data-target="contact" class="block py-2 px-3 rounded-md text-base font-medium bg-main-blue text-white hover:bg-main-blue-dark transition duration-150">联系我</a>
+                <a href="#" data-target="about" class="flex items-center py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">关于我</a>
+                <a href="#" data-target="skills" class="flex items-center py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">技能栈</a>
+                <a href="#" data-target="experience" class="flex items-center py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">经历</a>
+                <a href="#" data-target="portfolio" class="flex items-center py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">作品集</a>
+                <a href="#" data-target="honors" class="flex items-center py-2 px-3 rounded-md text-base font-medium text-gray-600 hover:text-main-blue hover:bg-gray-50 transition duration-150">荣誉</a>
+                <a href="#" data-target="contact" class="flex items-center py-2 px-3 rounded-md text-base font-medium bg-main-blue text-white hover:bg-main-blue-dark transition duration-150">联系我</a>
             </div>
         </div>
     </header>
@@ -365,6 +365,20 @@
                             <li class="pl-1"><span class="font-bold text-gray-800">客户沟通:</span> 主动与客户沟通demo效果，根据反馈意见修改内容，确保交付质量。</li>
                         </ul>
                     </div>
+
+                    <!-- Item 4: 摄影摄像 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-main-blue/30 transition duration-300 hover:shadow-xl">
+                        <div class="flex flex-col md:flex-row justify-between items-start mb-2">
+                            <h4 class="text-2xl font-bold text-gray-900">摄影摄像</h4>
+                            <p class="text-sm font-medium text-gray-500 mt-1 md:mt-0">2023.03 - 2023.06</p>
+                        </div>
+                        <p class="text-xl font-bold text-main-blue mb-4">党支部活动及会议记录</p>
+                        <ul class="list-disc space-y-2 pl-5 text-gray-600">
+                            <li class="pl-1"><span class="font-bold text-gray-800">会前准备:</span> 调试设备，规划拍摄机位，确保拍摄质量。</li>
+                            <li class="pl-1"><span class="font-bold text-gray-800">会议拍摄:</span> 精准抓拍会议全场景，记录重要瞬间。</li>
+                            <li class="pl-1"><span class="font-bold text-gray-800">后期处理:</span> 整理修图并按要求交付素材，确保资料完整性。</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -379,7 +393,7 @@
                     <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300" data-filter="organization">组织策划</button>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                     <!-- Project 1: 徐州工程学院宣传片 -->
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
                     <div class="card-container-project project-card video-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(0)">
@@ -448,6 +462,30 @@
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">组织主导</span>
                                 <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">视觉策划</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: 党支部活动及会议记录 -->
+                    <!-- Added card-container-project and relative class for hover effect and arrow position -->
+                    <div class="card-container-project project-card organization-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(3)">
+                         <!-- NEW Arrow Guide Icon -->
+                        <div class="arrow-guide absolute top-4 right-4 p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m9 18 6-6-6-6"/>
+                            </svg>
+                        </div>
+
+                        <img src="https://placehold.co/800x450/ECFDF5/059669?text=Team+Work+Placeholder" onerror="this.onerror=null;this.src='https://placehold.co/800x450/ECFDF5/059669?text=Image+Unavailable';" alt="党支部活动及会议记录" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <p class="text-sm font-semibold text-main-blue">摄影摄像</p>
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">党支部活动及会议记录</h4>
+                            <p class="text-gray-600 text-sm mb-4">
+                                会前调试设备规划机位，会中精准抓拍会议全场景，会后整理修图并按要求交付素材。
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">摄影</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">摄像</span>
                             </div>
                         </div>
                     </div>
@@ -736,6 +774,14 @@
                 description: "担任校大学生新媒体工作室的视觉传达部部长，负责部门的日常组织管理和对外协调工作。主要工作包括主持跨部门活动的视觉设计（海报、宣传视频、KV设计），优化团队内部协作流程，并定期对新成员进行专业培训。通过优化工作流，显著提升了校级活动的视觉宣传效率和质量。",
                 tags: ["组织管理", "团队协作", "视觉策划", "活动支持", "领导力"],
                 link: "https://www.example.com/project3" // 替换为实际链接
+            },
+            {
+                title: "党支部活动及会议记录",
+                role: "摄影摄像",
+                image: "https://placehold.co/800x450/ECFDF5/059669?text=Team+Work+Placeholder",
+                description: "会前调试设备规划机位，会中精准抓拍会议全场景，会后整理修图并按要求交付素材。",
+                tags: ["摄影", "摄像"],
+                link: "https://www.example.com/party-branch-records" // 替换为实际链接
             }
         ];
 
@@ -864,17 +910,17 @@
                 document.querySelector(`[data-filter="${filter}"]`).classList.add('bg-main-blue', 'text-white', 'active');
                 
                 // 筛选卡片
-                cards.forEach((card, index) => {
+                cards.forEach(card => {
                     if (filter === 'all') {
                         card.style.display = 'block';
                     } else if (filter === 'video') {
-                        if (index < 2) {
+                        if (card.classList.contains('video-project')) {
                             card.style.display = 'block';
                         } else {
                             card.style.display = 'none';
                         }
                     } else if (filter === 'organization') {
-                        if (index === 2) {
+                        if (card.classList.contains('organization-project')) {
                             card.style.display = 'block';
                         } else {
                             card.style.display = 'none';
