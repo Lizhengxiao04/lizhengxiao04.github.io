@@ -73,6 +73,42 @@
             opacity: 1;
             color: #4338CA; /* hover:text-main-blue-dark */
         }
+        
+        /* Reset Project Card Content */
+        .card-container-project .p-6 {
+            max-height: none;
+            overflow-y: visible;
+        }
+        
+        /* Custom Scrollbar for Modal */
+        .project-modal-scrollbar {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        /* WebKit Scrollbar Styling */
+        .project-modal-scrollbar::-webkit-scrollbar {
+            width: 2px;
+            position: absolute;
+            right: 3px;
+            top: 16px;
+            bottom: 16px;
+        }
+        
+        .project-modal-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        
+        .project-modal-scrollbar::-webkit-scrollbar-thumb {
+            background: #4F46E5; /* Main blue color */
+            border-radius: 1px;
+            min-height: 20px;
+        }
+        
+        .project-modal-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #4338CA; /* Darker blue on hover */
+        }
 
         /* Custom style for copy feedback transition */
         .copy-btn {
@@ -187,7 +223,7 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div class="p-4 bg-gray-50 rounded-xl">
                                 <p class="text-xs text-gray-500">学历</p>
-                                <p class="font-medium text-gray-800">本科学习 (数字媒体艺术)</p>
+                                <p class="font-medium text-gray-800">本科学习<br>(数字媒体艺术)</p>
                             </div>
                             <div class="p-4 bg-gray-50 rounded-xl">
                                 <p class="text-xs text-gray-500">出生日期</p>
@@ -292,10 +328,10 @@
                             <h4 class="text-xl font-bold text-gray-900">AI 工具与效率</h4>
                         </div>
                         <ul class="space-y-4">
-                            <li class="pt-2"><p class="text-gray-700">Midjourney / SD (图像生成)</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-orange-600 h-2.5 rounded-full" style="width: 85%"></div></div><span class="text-xs text-orange-600 font-medium">熟练应用</span></li>
-                            <li class="pt-2"><p class="text-gray-700">ChatGPT / Gemini (文本辅助)</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-orange-600 h-2.5 rounded-full" style="width: 90%"></div></div><span class="text-xs text-orange-600 font-medium">高频使用</span></li>
-                            <li class="pt-2"><p class="text-gray-700">Runway / Pika (视频辅助)</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-orange-600 h-2.5 rounded-full" style="width: 70%"></div></div><span class="text-xs text-orange-600 font-medium">掌握</span></li>
-                            <li class="pt-2"><p class="text-gray-700">AIGC 流程整合</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-orange-600 h-2.5 rounded-full" style="width: 80%"></div></div><span class="text-xs text-orange-600 font-medium">良好</span></li>
+                            <li class="pt-2"><p class="text-gray-700">ChatGPT / Gemini (文本代码)</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-orange-600 h-2.5 rounded-full" style="width: 95%"></div></div><span class="text-xs text-orange-600 font-medium">高频使用</span></li>
+                            <li class="pt-2"><p class="text-gray-700">Midjourney / SD (图像生成)</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-orange-600 h-2.5 rounded-full" style="width: 75%"></div></div><span class="text-xs text-orange-600 font-medium">熟练应用</span></li>
+                            <li class="pt-2"><p class="text-gray-700">Runway / Pika (视频辅助)</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-orange-600 h-2.5 rounded-full" style="width: 75%"></div></div><span class="text-xs text-orange-600 font-medium">掌握</span></li>
+                            <li class="pt-2"><p class="text-gray-700">AIGC 流程整合</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-orange-600 h-2.5 rounded-full" style="width: 85%"></div></div><span class="text-xs text-orange-600 font-medium">良好</span></li>
                         </ul>
                     </div>
 
@@ -308,21 +344,55 @@
                             <h4 class="text-xl font-bold text-gray-900">语言与办公</h4>
                         </div>
                         <ul class="space-y-4">
-                            <li class="pt-2 flex items-center space-x-2 flex-nowrap min-w-[250px]">
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <li class="pt-2 flex flex-row justify-start items-center space-x-2">
+                                <span class="px-2 py-0.5 bg-green-100 text-green-800 text-xs font-medium rounded-full flex items-center whitespace-nowrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-0.5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                                     英语 CET-4
                                 </span>
-                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                <span class="px-2 py-0.5 bg-green-100 text-green-800 text-xs font-medium rounded-full flex items-center whitespace-nowrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-0.5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
                                     普通话 二甲
                                 </span>
                             </li>
-                            <li class="pt-4">
-                                <p class="text-gray-700 flex items-center space-x-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L19.5 7.25m-6.5 6.5L3 18.25m14.25-10.75l-4-4L6.75 13.5l4 4M21 21L3 3" /></svg>
-                                    Office 办公软件
-                                </p>
+                            <li class="pt-4 space-y-3">
+                                <div class="flex items-center space-x-2 text-gray-700">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-500" stroke="currentColor">
+                                        <path d="M10.6 2.90319H4.6C2.61177 2.90319 1 4.51497 1 6.50319V18.5033C1 20.4915 2.61177 22.1033 4.6 22.1033H16.6C18.5882 22.1033 20.2 20.4915 20.2 18.5033L20.2 12.5032M7 16.1032L11.366 15.2235C11.5978 15.1768 11.8106 15.0626 11.9777 14.8954L21.7514 5.11637C22.22 4.64752 22.2197 3.88753 21.7507 3.41907L19.6803 1.35099C19.2115 0.882725 18.4519 0.883044 17.9835 1.3517L8.20876 11.1318C8.04195 11.2987 7.92805 11.511 7.8813 11.7423L7 16.1032Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="font-semibold">Office 办公软件</span>
+                                </div>
+                                <div class="space-y-3">
+                                    <div>
+                                        <div class="flex justify-between text-sm text-gray-700 mb-1">
+                                            <span>Word</span>
+                                            <span class="sr-only">熟练</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                                            <div class="h-2 bg-green-500 rounded-full" style="width: 88%;"></div>
+                                        </div>
+                                        <div class="text-xs text-green-700 mt-1">熟练</div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-sm text-gray-700 mb-1">
+                                            <span>Excel</span>
+                                            <span class="sr-only">熟练</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                                            <div class="h-2 bg-green-500 rounded-full" style="width: 85%;"></div>
+                                        </div>
+                                        <div class="text-xs text-green-700 mt-1">熟练</div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-sm text-gray-700 mb-1">
+                                            <span>PPT</span>
+                                            <span class="sr-only">熟练</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                                            <div class="h-2 bg-green-500 rounded-full" style="width: 90%;"></div>
+                                        </div>
+                                        <div class="text-xs text-green-700 mt-1">熟练</div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                         <p class="text-xs text-gray-500 italic mt-6 border-t pt-4">
@@ -410,7 +480,7 @@
                     <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm" data-filter="photography">摄影摄像</button>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6" id="portfolio-grid">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="portfolio-grid">
                     <!-- Project 1: 徐州工程学院宣传片 -->
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
                     <div class="card-container-project project-card video-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(0)">
@@ -469,7 +539,7 @@
                             </svg>
                         </div>
 
-                        <img src="https://placehold.co/800x450/ECFDF5/059669?text=Team+Work+Placeholder" onerror="this.onerror=null;this.src='https://placehold.co/800x450/ECFDF5/059669?text=Image+Unavailable';" alt="" class="w-full h-48 object-cover">
+                        <img src="image/校大学生新媒体工作室/1.jpg" onerror="this.onerror=null;this.src='https://placehold.co/800x450/ECFDF5/059669?text=Image+Unavailable';" alt="新媒体视觉传达中心" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <p class="text-sm font-semibold text-main-blue">组织管理</p>
                             <h4 class="text-xl font-bold text-gray-900 mb-3">新媒体视觉传达中心</h4>
@@ -493,7 +563,7 @@
                             </svg>
                         </div>
 
-                        <img src="https://placehold.co/800x450/ECFDF5/059669?text=Team+Work+Placeholder" onerror="this.onerror=null;this.src='https://placehold.co/800x450/ECFDF5/059669?text=Image+Unavailable';" alt="党支部活动及会议记录" class="w-full h-48 object-cover">
+                        <img src="image/党支部活动及会议记录/9.JPG" onerror="this.onerror=null;this.src='https://placehold.co/800x450/ECFDF5/059669?text=Image+Unavailable';" alt="党支部活动及会议记录" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <p class="text-sm font-semibold text-main-blue">摄影摄像</p>
                             <h4 class="text-xl font-bold text-gray-900 mb-3">党支部活动及会议记录</h4>
@@ -520,7 +590,9 @@
                     <!-- Award 1: 互联网+ (Orange Accent) -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-orange-500 hover:shadow-xl transition duration-300">
                         <div class="flex items-start space-x-4 mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18V6m0 0l-3-3m3 3l3-3m-9 9l4 4 4-4m-4 4l-4-4"/></svg>
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-orange-600 flex-shrink-0">
+                                <path d="M21.2 11.8C21.2 11.2477 20.7523 10.8 20.2 10.8C19.6477 10.8 19.2 11.2477 19.2 11.8H21.2ZM10.6 3.2C11.1523 3.2 11.6 2.75228 11.6 2.2C11.6 1.64772 11.1523 1.2 10.6 1.2V3.2ZM16.4 11.8C16.4 11.2477 15.9523 10.8 15.4 10.8C14.8477 10.8 14.4 11.2477 14.4 11.8H16.4ZM10.6 8C11.1523 8 11.6 7.55229 11.6 7C11.6 6.44772 11.1523 6 10.6 6V8ZM15.5497 8.07097C15.9403 7.68045 15.9403 7.04729 15.5497 6.65676C15.1592 6.26624 14.5261 6.26624 14.1355 6.65676L15.5497 8.07097ZM9.89289 10.8994C9.50237 11.2899 9.50237 11.9231 9.89289 12.3136C10.2834 12.7041 10.9166 12.7041 11.3071 12.3136L9.89289 10.8994ZM21.2086 4.39411L21.9157 5.10122C22.1836 4.83339 22.2771 4.43722 22.1573 4.07788C22.0375 3.71855 21.725 3.45773 21.35 3.40416L21.2086 4.39411ZM17.3902 8.21249L17.074 9.16117C17.4334 9.28095 17.8295 9.18743 18.0974 8.9196L17.3902 8.21249ZM13.9961 4.81838L13.289 4.11127C13.0212 4.3791 12.9277 4.77527 13.0475 5.1346L13.9961 4.81838ZM17.8145 1L18.8045 0.858579C18.7509 0.483613 18.4901 0.171095 18.1307 0.0513167C17.7714 -0.0684615 17.3752 0.025061 17.1074 0.292893L17.8145 1ZM14.8447 7.36396L13.896 7.68019C13.9955 7.97879 14.2298 8.21311 14.5284 8.31264L14.8447 7.36396ZM18.2388 3.96985L17.2488 4.11127C17.3117 4.55125 17.6574 4.89694 18.0974 4.9598L18.2388 3.96985ZM19.2 11.8C19.2 16.5496 15.3496 20.4 10.6 20.4V22.4C16.4542 22.4 21.2 17.6542 21.2 11.8H19.2ZM10.6 20.4C5.85035 20.4 2 16.5496 2 11.8H0C0 17.6542 4.74578 22.4 10.6 22.4V20.4ZM2 11.8C2 7.05035 5.85035 3.2 10.6 3.2V1.2C4.74578 1.2 0 5.94578 0 11.8H2ZM14.4 11.8C14.4 13.8987 12.6987 15.6 10.6 15.6V17.6C13.8033 17.6 16.4 15.0033 16.4 11.8H14.4ZM10.6 15.6C8.50132 15.6 6.8 13.8987 6.8 11.8H4.8C4.8 15.0033 7.39675 17.6 10.6 17.6V15.6ZM6.8 11.8C6.8 9.70132 8.50132 8 10.6 8V6C7.39675 6 4.8 8.59675 4.8 11.8H6.8ZM14.1355 6.65676L9.89289 10.8994L11.3071 12.3136L15.5497 8.07097L14.1355 6.65676ZM20.5015 3.68701L16.6831 7.50538L18.0974 8.9196L21.9157 5.10122L20.5015 3.68701ZM14.7032 5.52548L18.5216 1.70711L17.1074 0.292893L13.289 4.11127L14.7032 5.52548ZM17.7065 7.26381L15.1609 6.41528L14.5284 8.31264L17.074 9.16117L17.7065 7.26381ZM15.7934 7.04773L14.9448 4.50215L13.0475 5.1346L13.896 7.68019L15.7934 7.04773ZM16.8246 1.14142L17.2488 4.11127L19.2287 3.82843L18.8045 0.858579L16.8246 1.14142ZM18.0974 4.9598L21.0672 5.38406L21.35 3.40416L18.3802 2.9799L18.0974 4.9598Z" fill="currentColor"/>
+                            </svg>
                             <div>
                                 <h4 class="text-lg font-bold text-gray-900">互联网+大学生创新创业大赛</h4>
                                 <p class="text-base font-semibold text-orange-600 mt-1">省级一等奖</p>
@@ -541,13 +613,13 @@
                         <p class="text-gray-600 text-sm mt-4 pt-3 border-t border-gray-100">展现了在广告创意与制作方面的专业水准。</p>
                     </div>
 
-                    <!-- Award 3: 校级荣誉 (Main Blue Accent) -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-main-blue hover:shadow-xl transition duration-300">
+                    <!-- Award 3: 校级荣誉 (Red Accent) -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-600 hover:shadow-xl transition duration-300">
                         <div class="flex items-start space-x-4 mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-main-blue flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             <div>
                                 <h4 class="text-lg font-bold text-gray-900">校级主要荣誉</h4>
-                                <p class="text-base font-semibold text-main-blue mt-1">多项校级奖励</p>
+                                <p class="text-base font-semibold text-red-600 mt-1">多项校级奖励</p>
                             </div>
                         </div>
                         <ul class="list-disc space-y-1 text-gray-600 text-sm pl-5 mt-4 pt-3 border-t border-gray-100">
@@ -623,14 +695,14 @@
 
     <!-- Project Detail Modal (作品详情模态框) -->
     <div id="project-modal" class="modal-backdrop transition-opacity duration-300 opacity-0 hidden">
-        <div class="relative max-w-4xl mx-auto my-10 bg-white rounded-2xl shadow-2xl transform transition-transform duration-300 scale-95 md:scale-100">
+        <div class="relative max-w-4xl mx-auto my-4 sm:my-8 bg-white rounded-xl shadow-2xl transform transition-transform duration-300 scale-95 md:scale-100 project-modal-scrollbar">
             <!-- Modal Header / Close Button -->
             <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700 transition duration-150 p-2 rounded-full bg-white/70 backdrop-blur-sm z-10">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
 
             <!-- Modal Content -->
-            <div class="p-4 md:p-8">
+            <div class="p-4 sm:p-6 md:p-8">
                 <!-- Project Image/Video Placeholder -->
                 <div id="modal-media-placeholder" class="w-full h-auto bg-gray-200 rounded-xl overflow-hidden mb-6 aspect-video">
                     <!-- Placeholder image will be replaced by project-specific media -->
@@ -787,18 +859,37 @@
             {
                 title: "新媒体视觉传达中心",
                 role: "视觉传达部部长",
-                image: "https://placehold.co/800x450/ECFDF5/059669?text=Team+Work+Placeholder",
+                image: "image/校大学生新媒体工作室/1.jpg",
+                images: [
+                    "image/校大学生新媒体工作室/1.jpg",
+                    "image/校大学生新媒体工作室/2.jpg",
+                    "image/校大学生新媒体工作室/3.jpg",
+                    "image/校大学生新媒体工作室/4.jpg",
+                    "image/校大学生新媒体工作室/5.jpg",
+                    "image/校大学生新媒体工作室/6.jpg",
+                    "image/校大学生新媒体工作室/7.jpg"
+                ],
                 description: "担任校大学生新媒体工作室的视觉传达部部长，负责部门的日常组织管理和对外协调工作。主要工作包括主持跨部门活动的视觉设计（海报、宣传视频、KV设计），优化团队内部协作流程，并定期对新成员进行专业培训。通过优化工作流，显著提升了校级活动的视觉宣传效率和质量。",
                 tags: ["组织管理", "团队协作", "视觉策划", "活动支持", "领导力"],
-                link: "https://www.example.com/project3" // 替换为实际链接
+                link: "https://mp.weixin.qq.com/s/iHYsCjaOiXE2WPyt9Gj37A" // 微信公众号文章链接
             },
             {
                 title: "党支部活动及会议记录",
                 role: "摄影摄像",
-                image: "https://placehold.co/800x450/ECFDF5/059669?text=Team+Work+Placeholder",
-                description: "会前调试设备规划机位，会中精准抓拍会议全场景，会后整理修图并按要求交付素材。",
-                tags: ["摄影", "摄像"],
-                link: "https://www.example.com/party-branch-records" // 替换为实际链接
+                image: "image/党支部活动及会议记录/9.JPG",
+                images: [
+                    "image/党支部活动及会议记录/1.JPG",
+                    "image/党支部活动及会议记录/2.JPG",
+                    "image/党支部活动及会议记录/3.JPG",
+                    "image/党支部活动及会议记录/4.JPG",
+                    "image/党支部活动及会议记录/5.JPG",
+                    "image/党支部活动及会议记录/6.JPG",
+                    "image/党支部活动及会议记录/7.JPG",
+                    "image/党支部活动及会议记录/8.JPG",
+                    "image/党支部活动及会议记录/9.JPG"
+                ],
+                description: "负责党支部活动及会议的全程摄影摄像工作。会前提前到场调试摄影摄像设备，根据会议场地布局、流程环节规划最优机位，确保拍摄视角全面且符合活动记录要求；会中精准捕捉会议全程画面，重点记录发言、表决、互动等关键环节，保障画面清晰、构图规范，完整还原会议场景；会后及时整理拍摄素材，对图片进行筛选、修图优化，按档案管理及使用要求完成素材分类、命名、交付，为党支部活动留痕存档、宣传报道提供了高质量的影像支撑，确保活动及会议记录的完整性与专业性。",
+                tags: ["摄影", "摄像"]
             }
         ];
 
@@ -810,14 +901,122 @@
         const modalDescription = document.getElementById('modal-description');
         const modalTags = document.getElementById('modal-tags');
         const modalLink = document.getElementById('modal-link');
+        const CAROUSEL_INTERVAL = 4000; // ms
         
-        // 确保模态框关闭时恢复滚动并停止视频播放
+        let carouselTimer = null;
+        let carouselImages = [];
+        let carouselIndex = 0;
+
+        // 停止轮播定时器（不清除数据，用于暂停/重启）
+        function stopCarousel() {
+            if (carouselTimer) {
+                clearInterval(carouselTimer);
+                carouselTimer = null;
+            }
+        }
+
+        // 完整重置轮播状态（关闭/切换项目时使用）
+        function resetCarouselState() {
+            stopCarousel();
+            carouselImages = [];
+            carouselIndex = 0;
+        }
+
+        // 初始化轮播内容
+        function initCarousel(images, title) {
+            const mediaPlaceholder = document.getElementById('modal-media-placeholder');
+            if (!mediaPlaceholder || !images?.length) return;
+
+            mediaPlaceholder.innerHTML = `
+                <div id="carousel-wrapper" class="relative w-full h-full">
+                    <img id="carousel-image" src="${images[0]}" onerror="this.onerror=null;this.src='https://placehold.co/800x450/ECFDF5/059669?text=Image+Unavailable';" alt="${title} 第1张" class="w-full h-full object-cover">
+                    <button id="carousel-prev" class="absolute top-1/2 -translate-y-1/2 left-3 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m15 19-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button id="carousel-next" class="absolute top-1/2 -translate-y-1/2 right-3 bg-black/40 text-white p-2 rounded-full hover:bg-black/60 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7" />
+                        </svg>
+                    </button>
+                    <div id="carousel-dots" class="absolute bottom-3 left-0 right-0 flex justify-center gap-2"></div>
+                </div>
+            `;
+
+            carouselImages = images;
+            carouselIndex = 0;
+
+            const imageEl = document.getElementById('carousel-image');
+            const dotsContainer = document.getElementById('carousel-dots');
+            dotsContainer.innerHTML = images.map((_, idx) =>
+                `<span data-idx="${idx}" class="w-2.5 h-2.5 rounded-full border border-white/70 ${idx === 0 ? 'bg-white' : 'bg-white/50'} cursor-pointer transition"></span>`
+            ).join('');
+
+            const dots = Array.from(dotsContainer.querySelectorAll('span'));
+
+            function renderDots() {
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle('bg-white', idx === carouselIndex);
+                    dot.classList.toggle('bg-white/50', idx !== carouselIndex);
+                });
+            }
+
+            function showSlide(targetIndex) {
+                if (!carouselImages.length) return;
+                carouselIndex = (targetIndex + carouselImages.length) % carouselImages.length;
+                imageEl.onerror = null; // 重置onerror处理
+                imageEl.src = carouselImages[carouselIndex];
+                imageEl.alt = `${title} 第${carouselIndex + 1}张`;
+                // 添加onerror处理，确保切换图片时也能处理错误
+                imageEl.onerror = function() {
+                    this.onerror = null;
+                    this.src = 'https://placehold.co/800x450/ECFDF5/059669?text=Image+Unavailable';
+                };
+                renderDots();
+            }
+
+            function restartAuto() {
+                stopCarousel();
+                carouselTimer = setInterval(() => showSlide(carouselIndex + 1), CAROUSEL_INTERVAL);
+            }
+
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            prevBtn?.addEventListener('click', () => {
+                showSlide(carouselIndex - 1);
+                restartAuto();
+            });
+            nextBtn?.addEventListener('click', () => {
+                showSlide(carouselIndex + 1);
+                restartAuto();
+            });
+
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const idx = Number(dot.dataset.idx ?? 0);
+                    showSlide(idx);
+                    restartAuto();
+                });
+            });
+
+            const wrapper = document.getElementById('carousel-wrapper');
+            wrapper?.addEventListener('mouseenter', stopCarousel);
+            wrapper?.addEventListener('mouseleave', restartAuto);
+
+            showSlide(0);
+            restartAuto();
+        }
+
+        // 确保模态框关闭时恢复滚动并停止视频/轮播
         function closeProjectModal() {
             // 停止视频播放
             const modalVideo = document.querySelector('#modal-media-placeholder video');
             if (modalVideo) {
                 modalVideo.pause();
             }
+
+            resetCarouselState();
             
             modal.classList.add('opacity-0', 'hidden');
             modal.classList.remove('opacity-100', 'flex');
@@ -828,22 +1027,15 @@
         function openProjectModal(projectId) {
             const project = PROJECTS[projectId];
             if (!project) return;
+
+            resetCarouselState();
             
             // 填充基本信息
             modalTitle.textContent = project.title;
             modalRole.textContent = project.role;
             modalDescription.textContent = project.description;
             
-            // 填充媒体内容（视频或图片）
             const mediaPlaceholder = document.getElementById('modal-media-placeholder');
-            if (project.video) {
-                // 显示视频
-                mediaPlaceholder.innerHTML = `<video src="${project.video}" class="w-full h-full object-cover" controls preload="metadata"></video>`;
-            } else {
-                // 显示图片
-                mediaPlaceholder.innerHTML = `<img id="modal-image" src="${project.image}" class="w-full h-full object-cover" alt="项目：${project.title} 媒体">`;
-            }
-
             // 填充标签
             modalTags.innerHTML = project.tags.map(tag => 
                 `<span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">${tag}</span>`
@@ -857,9 +1049,18 @@
                 modalLink.classList.add('hidden');
             }
 
+            // 填充媒体内容（轮播 / 视频 / 单张图）
+            if (project.images && project.images.length) {
+                initCarousel(project.images, project.title);
+            } else if (project.video) {
+                mediaPlaceholder.innerHTML = `<video src="${project.video}" class="w-full h-full object-cover" controls preload="metadata"></video>`;
+            } else {
+                mediaPlaceholder.innerHTML = `<img id="modal-image" src="${project.image}" class="w-full h-full object-cover" alt="项目：${project.title} 媒体">`;
+            }
+
             // 显示模态框
             modal.classList.remove('opacity-0', 'hidden');
-            modal.classList.add('opacity-100', 'flex', 'items-center', 'justify-center');
+            modal.classList.add('opacity-100', 'flex', 'justify-center');
             document.body.style.overflow = 'hidden'; // 禁止主页面的滚动
 
             // 允许点击背景关闭
