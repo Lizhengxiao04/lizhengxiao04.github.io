@@ -66,12 +66,12 @@
         .arrow-guide {
             transition: transform 0.3s ease-out, opacity 0.3s ease-out, color 0.3s ease-out;
             opacity: 0.6; /* Slightly visible initially */
-            color: #4F46E5; /* text-main-blue */
+            color: white; /* Changed to white */
         }
         .card-container-project:hover .arrow-guide {
             transform: translateX(4px);
             opacity: 1;
-            color: #4338CA; /* hover:text-main-blue-dark */
+            color: white; /* Changed to white */
         }
         
         /* Reset Project Card Content */
@@ -125,6 +125,16 @@
         /* Override default button active state */
         .filter-btn:active {
             transform: none !important;
+        }
+        
+        /* Hide scrollbar but maintain functionality */
+        .overflow-x-auto {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .overflow-x-auto::-webkit-scrollbar {
+            display: none;
         }
     </style>
 </head>
@@ -180,7 +190,7 @@
                         你好, 我是 <span class="text-main-blue">栗正萧</span>
                     </h1>
                     <h2 class="text-xl font-medium text-gray-700 mb-6">
-                        数字媒体艺术专业 · 视频剪辑师 · 视觉设计师
+                        数字媒体艺术专业
                     </h2>
                     <p class="text-lg text-gray-600 max-w-lg mb-10 mx-auto lg:mx-0">
                         具备扎实的视听语言基础与丰富的影视媒体运营经验。熟练掌握 AE、PR、Figma 等专业工具。
@@ -190,7 +200,7 @@
                         <!-- Buttons updated with data-target for smooth scroll -->
                         <a href="#" data-target="experience" class="flex items-center px-6 py-3 bg-gray-900 text-white font-semibold rounded-xl shadow-lg hover:bg-gray-700 transition duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                            查看简历
+                            项目经历
                         </a>
                         <a href="#" data-target="portfolio" class="flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-xl hover:bg-gray-100 transition duration-300">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -298,10 +308,10 @@
                             <h4 class="text-xl font-bold text-gray-900">视频与交互后期</h4>
                         </div>
                         <ul class="space-y-4">
-                            <li class="pt-2"><p class="text-gray-700">Final Cut Pro / PR</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-purple-600 h-2.5 rounded-full" style="width: 95%"></div></div><span class="text-xs text-purple-600 font-medium">熟练</span></li>
-                            <li class="pt-2"><p class="text-gray-700">After Effects</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-purple-600 h-2.5 rounded-full" style="width: 90%"></div></div><span class="text-xs text-purple-600 font-medium">熟练</span></li>
-                            <li class="pt-2"><p class="text-gray-700">TouchDesigner</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-purple-600 h-2.5 rounded-full" style="width: 65%"></div></div><span class="text-xs text-purple-600 font-medium">掌握</span></li>
-                            <li class="pt-2"><p class="text-gray-700">Compressor</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-purple-600 h-2.5 rounded-full" style="width: 80%"></div></div><span class="text-xs text-purple-600 font-medium">熟练</span></li>
+                            <li class="pt-2"><p class="text-gray-700">Final Cut Pro / PR（调色剪辑）</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-purple-600 h-2.5 rounded-full" style="width: 95%"></div></div><span class="text-xs text-purple-600 font-medium">熟练</span></li>
+                             <li class="pt-2"><p class="text-gray-700">After Effects（特效）</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-purple-600 h-2.5 rounded-full" style="width: 90%"></div></div><span class="text-xs text-purple-600 font-medium">熟练</span></li>
+                             <li class="pt-2"><p class="text-gray-700">TouchDesigner（交互）</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-purple-600 h-2.5 rounded-full" style="width: 65%"></div></div><span class="text-xs text-purple-600 font-medium">掌握</span></li>
+                             <li class="pt-2"><p class="text-gray-700">Compressor（特效）</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-purple-600 h-2.5 rounded-full" style="width: 80%"></div></div><span class="text-xs text-purple-600 font-medium">熟练</span></li>
                         </ul>
                     </div>
 
@@ -314,10 +324,10 @@
                             <h4 class="text-xl font-bold text-gray-900">平面与三维设计</h4>
                         </div>
                         <ul class="space-y-4">
-                            <li class="pt-2"><p class="text-gray-700">Photoshop / Ai</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div></div><span class="text-xs text-blue-600 font-medium">熟练</span></li>
-                            <li class="pt-2"><p class="text-gray-700">Figma</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div><span class="text-xs text-blue-600 font-medium">良好</span></li>
-                            <li class="pt-2"><p class="text-gray-700">Blender</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div></div><span class="text-xs text-blue-600 font-medium">掌握</span></li>
-                            <li class="pt-2"><p class="text-gray-700">Xmind</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div></div><span class="text-xs text-blue-600 font-medium">熟练</span></li>
+                            <li class="pt-2"><p class="text-gray-700">Photoshop / Ai（平面）</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div></div><span class="text-xs text-blue-600 font-medium">熟练</span></li>
+                             <li class="pt-2"><p class="text-gray-700">Figma（UX/UI）</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div><span class="text-xs text-blue-600 font-medium">良好</span></li>
+                             <li class="pt-2"><p class="text-gray-700">Blender（建模）</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div></div><span class="text-xs text-blue-600 font-medium">掌握</span></li>
+                             <li class="pt-2"><p class="text-gray-700">Xmind（思维导图）</p><div class="w-full bg-gray-200 rounded-full h-2.5 mt-1"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div></div><span class="text-xs text-blue-600 font-medium">熟练</span></li>
                         </ul>
                     </div>
                     
@@ -473,11 +483,11 @@
         <section id="portfolio" class="py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h3 class="text-4xl font-extrabold text-center text-gray-900 mb-6">精选作品展示</h3>
-                <div class="flex justify-center space-x-4 mb-10">
-                    <button class="filter-btn active px-5 py-2 text-white bg-main-blue font-semibold rounded-full shadow-md transition duration-300" data-filter="all">全部</button>
-                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm" data-filter="video">视频制作</button>
-                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm" data-filter="organization">组织策划</button>
-                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm" data-filter="photography">摄影摄像</button>
+                <div class="flex justify-center space-x-4 mb-10 overflow-x-auto pb-2 -mx-4 px-4">
+                    <button class="filter-btn active px-5 py-2 text-white bg-main-blue font-semibold rounded-full shadow-md transition duration-300 whitespace-nowrap" data-filter="all">全部</button>
+                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm whitespace-nowrap" data-filter="video">视频制作</button>
+                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm whitespace-nowrap" data-filter="organization">组织策划</button>
+                    <button class="filter-btn px-5 py-2 text-gray-600 bg-white border border-gray-300 font-semibold rounded-full hover:bg-gray-50 transition duration-300 shadow-sm whitespace-nowrap" data-filter="photography">摄影摄像</button>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="portfolio-grid">
@@ -485,7 +495,7 @@
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
                     <div class="card-container-project project-card video-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(0)">
                         <!-- NEW Arrow Guide Icon -->
-                        <div class="arrow-guide absolute top-4 right-4 p-2">
+                        <div class="arrow-guide absolute top-4 right-4 p-2 bg-black/50 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m9 18 6-6-6-6"/>
                             </svg>
@@ -509,7 +519,7 @@
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
                     <div class="card-container-project project-card video-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(1)">
                         <!-- NEW Arrow Guide Icon -->
-                        <div class="arrow-guide absolute top-4 right-4 p-2">
+                        <div class="arrow-guide absolute top-4 right-4 p-2 bg-black/50 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m9 18 6-6-6-6"/>
                             </svg>
@@ -533,7 +543,7 @@
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
                     <div class="card-container-project project-card organization-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(2)">
                          <!-- NEW Arrow Guide Icon -->
-                        <div class="arrow-guide absolute top-4 right-4 p-2">
+                        <div class="arrow-guide absolute top-4 right-4 p-2 bg-black/50 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m9 18 6-6-6-6"/>
                             </svg>
@@ -557,7 +567,7 @@
                     <!-- Added card-container-project and relative class for hover effect and arrow position -->
                     <div class="card-container-project project-card photography-project relative bg-white rounded-xl shadow-lg hover:shadow-xl transition all duration-300 overflow-hidden cursor-pointer" onclick="openProjectModal(3)">
                          <!-- NEW Arrow Guide Icon -->
-                        <div class="arrow-guide absolute top-4 right-4 p-2">
+                        <div class="arrow-guide absolute top-4 right-4 p-2 bg-black/50 rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="m9 18 6-6-6-6"/>
                             </svg>
@@ -638,7 +648,7 @@
                             <h4 class="text-2xl font-bold">自我评价 (Self-Evaluation)</h4>
                         </div>
                         <p class="text-xl italic border-t border-blue-400 pt-4">
-                            “具备良好的心态和强烈的责任感，能够吃苦耐劳，善于制定并严格执行时间管理计划，以确保项目顺利完成。”
+                            “我拥有强烈的自我驱动力和持续学习的热情，并将这种能力体现在自主开发此个人作品展示网站上。在具体项目执行中，我能保持高度的责任心和职业态度，通过高效的时间管理，确保工作上的项目高质量、准时地落地完成。”
                         </p>
                     </div>
                 </div>
@@ -650,7 +660,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h3 class="text-4xl font-extrabold mb-4">期待与您共事</h3>
                 <p class="text-xl text-gray-300 mb-12">
-                    我正在寻找数字媒体、视频剪辑或视觉设计相关的全职工作机会。<br class="hidden md:inline">
+                    我正在寻找新媒体运营、文化宣传、视频剪辑、视觉设计相关、摄影摄像等全职工作机会。<br class="hidden md:inline">
                     随时欢迎联系我!
                 </p>
 
@@ -683,7 +693,7 @@
 
     <!-- Footer -->
     <footer class="bg-gray-900 py-6 text-center text-gray-400 text-sm">
-        <p>&copy; 2023 栗正萧. All Rights Reserved. Designed for HR Review.</p>
+        <p>&copy; 2025 栗正萧. All Rights Reserved. Designed for HR Review.</p>
     </footer>
 
     <!-- Scroll to Top Button (Updated to use ID for JS handler) -->
