@@ -38,7 +38,7 @@
 ```
 /
 ├── index.html          # 主页面 (优化后的HTML)
-├── style.css           # 外部CSS样式文件
+├── style.css           # 自定义样式文件
 ├── script.js           # 外部JavaScript文件
 ├── CNAME               # GitHub Pages自定义域名配置
 ├── image/              # 图片资源文件夹
@@ -73,6 +73,15 @@
 - **框架**: Tailwind CSS (CDN)
 - **脚本**: 原生JavaScript (ES6+)
 - **优化工具**: GitHub Pages CDN + 客户端优化
+
+### Tailwind CSS使用说明：
+虽然一般建议在生产环境中避免使用CDN版本，但对于GitHub Pages部署的个人网站，Tailwind CDN是最佳选择：
+
+✅ **优势**：
+- 自动更新到最新版本
+- GitHub Pages CDN加速
+- 无需本地构建流程
+- 完全兼容所有Tailwind功能
 
 ### 🎯 GitHub Pages优化特性：
 - **自动HTTPS**: 免费SSL证书
