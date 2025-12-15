@@ -1,0 +1,136 @@
+/* Custom styles to set Inter font preference, falling back to system sans-serif fonts */
+body {
+    font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+/* Custom class for the soft, pulsing background effect in the hero section */
+.hero-background {
+    background: linear-gradient(135deg, rgba(230, 240, 255, 0.8), rgba(255, 255, 255, 0.9));
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 75% 25%, rgba(199, 210, 254, 0.5) 0%, transparent 60%),
+                radial-gradient(circle at 25% 75%, rgba(165, 180, 252, 0.3) 0%, transparent 60%);
+    animation: moveGradient 20s infinite alternate;
+    opacity: 0.5;
+}
+
+@keyframes moveGradient {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-5%, -5%); }
+}
+
+/* Custom color for the main theme blue */
+.text-main-blue { color: #4F46E5; }
+.bg-main-blue { background-color: #4F46E5; }
+.hover\:bg-main-blue-dark:hover { background-color: #4338CA; }
+.ring-main-blue { ring-color: #4F46E5; }
+
+/* Modal Backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 60; /* Above header (z-50) */
+    display: none;
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+/* Project Card Arrow Guide Styles */
+.card-container-project {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-container-project:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Slightly heavier shadow for impact */
+}
+
+.arrow-guide {
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, color 0.3s ease-out;
+    opacity: 0.6; /* Slightly visible initially */
+    color: white; /* Changed to white */
+}
+
+.card-container-project:hover .arrow-guide {
+    transform: translateX(4px);
+    opacity: 1;
+    color: white; /* Changed to white */
+}
+
+/* Reset Project Card Content */
+.card-container-project .p-6 {
+    max-height: none;
+    overflow-y: visible;
+}
+
+/* Custom Scrollbar for Modal */
+.project-modal-scrollbar {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* WebKit Scrollbar Styling */
+.project-modal-scrollbar::-webkit-scrollbar {
+    width: 2px;
+    position: absolute;
+    right: 3px;
+    top: 16px;
+    bottom: 16px;
+}
+
+.project-modal-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.project-modal-scrollbar::-webkit-scrollbar-thumb {
+    background: #4F46E5; /* Main blue color */
+    border-radius: 1px;
+    min-height: 20px;
+}
+
+.project-modal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #4338CA; /* Darker blue on hover */
+}
+
+/* Custom style for copy feedback transition */
+.copy-btn {
+    transition: background-color 0.3s, transform 0.1s, color 0.3s;
+}
+
+/* Fix for filter button disappearing on click */
+.filter-btn.active {
+    background-color: #4F46E5 !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* Override default button active state */
+.filter-btn:active {
+    transform: none !important;
+}
+
+/* Hide scrollbar but maintain functionality */
+.overflow-x-auto {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+    display: none;
+}
